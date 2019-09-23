@@ -1,7 +1,9 @@
-# Spring-Crud-Bootstrap
-Crud sencillo con Spring CRUD + Bootstrap ( caso: Club de futbol )
+# Spring-Crud-Bootstrap ClubFutbol
+
+Crea tu Club de Futbol
+Crud sencillo con Spring CRUD + Bootstrap 
 Contiene metodo: listar, buscar, agregar, eliminar, modificar
-ademas de poder agregar jugadores a cada club.
+ademas de poder agregar y eliminar jugadores a cada club.
 
 Se añadira mas metodos en el transcurso de los dias.
 Como la compra, venta y prestamo de jugadores ademas de la creacion de ligas de futbol.
