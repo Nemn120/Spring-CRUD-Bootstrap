@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<title>Aprendiendo Spring Metodo LISTAR</title>
+</head>
+<body>
+<h2>VER ELEMENTO</h2>
+
+	<table>
+		<thead >
+			<tr>
+				<th>ID</th>
+				<th>NOMBRE</th>
+				<th>CIUDAD</th>
+				<th>DNI</th>
+
+			</tr>
+		</thead>
+		<tbody>
+		<tr th:each="persona: ${persona}">
+			<td th:text="${persona.id}"></td>
+			<td th:text="${persona.nombre}"></td>
+			<td th:text="${persona.ciudad}"></td>
+			<td th:text="${persona.DNI}"></td>
+
+
+		</tr>
+		</tbody>
+	</table>
+
+
+		<a th:href="@{/persona/form}" th:text="'Crear'"></a>
+		<br>
+	<a th:href="@{/persona/listar}" th:text="'Listar'"></a>
+	<br>
+	<a th:href="@{/persona/buscar}" th:text="'Buscar'"></a>
+
+</body>
+</html>

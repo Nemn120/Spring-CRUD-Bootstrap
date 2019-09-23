@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<title>Aprendiendo Spring Metodo BUQUEDA LISTA</title>
+</head>
+<body>
+<h2>LISTAR ELEMENTOS</h2>
+
+	<table >
+		<thead >
+			<tr>
+				<th>ID</th>
+				<th>NOMBRE</th>
+				<th>CIUDAD</th>
+				<th>DNI</th>
+				<th>EDITAR</th>
+				<th>ELIMINAR</th>
+			
+			</tr>
+		</thead>
+		<tbody>
+		<tr th:each="persona: ${personas}">
+			<td><a th:href="@{/ver/} + ${persona.id}" th:text="${persona.id}"></a></td>
+			<td th:text="${persona.nombre}"></td>
+			<td th:text="${persona.ciudad}"></td>
+			<td th:text="${persona.DNI}"></td>
+			<td> <a th:href="@{/form/} + ${persona.id}" th:text="'Modificar'"></a></td>
+			<td> <a th:href="@{/eliminar/} + ${persona.id}" th:text="'Eliminar'"></a></td>
+		</tr>
+		</tbody>
+	</table>
+	<a th:href="@{/form}" th:text="'Crear'"></a>
+
+
+</body>
+</html>

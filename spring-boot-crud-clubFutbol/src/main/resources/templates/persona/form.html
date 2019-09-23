@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout/layout :: head"></head>
+<body>
+
+	<header th:replace="layout/layout :: header"></header>
+
+
+	<div class="card-header" th:text="${titulo}"></div>
+	<form th:action="@{/persona/form}" th:object="${persona}" method="POST">
+		<label>NOMBRE</label> <input type="text" th:value="*{nombre}"
+			th:field="*{nombre}" /> <br> <label>CIUDAD</label> <input
+			type="text" th:value="*{ciudad}" th:field="*{ciudad}" /> <br> <label>DNI</label>
+			
+			
+		<input type="text" th:value="*{DNI}" th:field="*{DNI}" /> 
+		
+		<label>PAIS</label>
+		
+		
+		<select th:field="*{pais}">
+			<option th:each="paiss : ${paises}" th:text="${paiss.name}"
+				th:value="${paiss}">
+				</option>
+				
+				
+		</select> <input type="submit" value="Crear Cliente Nuevo" />
+	</form>
+
+	<h3 th:text="'Nombre: '+ ${persona.nombre}"></h3>
+	<h3 th:text="'Apellido: '+${persona.ciudad}"></h3>
+	<h3 th:text="'DNI: '+${persona.DNI}"></h3>
+	<footer th:replace="layout/layout :: footer"></footer>
+
+</body>
+</html>
+

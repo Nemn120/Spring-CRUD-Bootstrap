@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout/layout :: head"></head>
+<body>
+	
+	<header th:replace="layout/layout :: header"></header>
+	<div class="card-header" th:text="${titulo}"></div>
+	
+<div class="container py-4">
+	<table class="table">
+		<thead class="thead-dark">
+			<tr>
+				<th>ID</th>
+				<th>NOMBRE CLUB </th>			
+				<th>PAIS </th>
+				<th>ESTADIO </th>
+				<th>FONDO </th>
+				
+				<th>EDITAR </th>
+				<th>ELIMINAR </th>
+			
+			</tr>
+		</thead>
+		<tbody>
+		<tr th:each="club: ${clubes}">
+			<td><a class="btn btn-primary" th:href="@{/club/ver/} + ${club.id}" th:text="${club.id}"></a></td>
+			<td th:text="${club.nombre}"></td>
+			<td th:text="${club.pais}"></td>
+			<td th:text="${club.estadio}"></td>
+			<td th:text="${club.fondo}"></td>
+			
+			<td> <a class="btn btn-secondary" th:href="@{/club/form/} + ${club.id}" th:text="'Modificar'"></a></td>
+			<td> <a class="btn btn-danger"th:href="@{/club/eliminar/} + ${club.id}" th:text="'Eliminar'"></a></td>
+		</tr>
+		</tbody>
+	</table>
+</div>
+	<footer th:replace="layout/layout :: footer"></footer>
+
+</body>
+</html>

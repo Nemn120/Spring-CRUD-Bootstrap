@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<title>Aprendiendo Spring Metodo Post</title>
+</head>
+
+<body>
+<h2>Persistencia de Datos</h2>
+<h2 th:text="${titulo} + ' DE CLUBES' "></h2>
+
+
+		<a th:href="@{/club/form}" th:text="'Crear'"></a>
+		<br>
+	<a th:href="@{/club/listar}" th:text="'Listar'"></a>
+	<br>
+	<a th:href="@{/club/buscar}" th:text="'Buscar'"></a>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="layout/layout :: head"></head>
+
+<body>
+
+	<header th:replace="layout/layout :: header"></header>	
+<h2>Persistencia de Datos</h2>
+<h2 th:text="${titulo}  + ' DE PERSONAS'"></h2>
+
+
+		<a th:href="@{/persona/form}" th:text="'Crear'"></a>
+		<br>
+	<a th:href="@{/persona/listar}" th:text="'Listar'"></a>
+	<br>
+	<a th:href="@{/persona/buscar}" th:text="'Buscar'"></a>
+	<footer th:replace="layout/layout :: footer"></footer>
+</body>
+</html>
