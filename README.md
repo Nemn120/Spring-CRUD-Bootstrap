@@ -1,4 +1,4 @@
-# Spring-Crud-Bootstrap ClubFutbol
+# Spring-CRUD-Bootstrap ClubFutbol
 
 Crea tu Club de Futbol
 Crud sencillo con Spring + Bootstrap 
